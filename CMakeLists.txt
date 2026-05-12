@@ -19,6 +19,7 @@ set(IMNODES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs/imnodes)
 
 add_executable(node_editor
     src/main.cpp
+    src/node_view.cpp
     ${IMGUI_DIR}/imgui.cpp
     ${IMGUI_DIR}/imgui_draw.cpp
     ${IMGUI_DIR}/imgui_tables.cpp
@@ -30,6 +31,7 @@ add_executable(node_editor
 )
 
 target_include_directories(node_editor PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${IMGUI_DIR}
     ${IMGUI_DIR}/backends
     ${IMNODES_DIR}
