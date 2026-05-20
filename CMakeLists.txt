@@ -12,10 +12,10 @@ set(SDL_INSTALL      OFF CACHE BOOL "" FORCE)
 # set static/shared options to ensure we get a static library (and avoid the need to copy DLLs on Windows)
 set(SDL_SHARED       OFF CACHE BOOL "" FORCE)
 set(SDL_STATIC       ON  CACHE BOOL "" FORCE)
-add_subdirectory(libs/SDL EXCLUDE_FROM_ALL)
+add_subdirectory(third_party/SDL EXCLUDE_FROM_ALL)
 
-set(IMGUI_DIR   ${CMAKE_CURRENT_SOURCE_DIR}/libs/imgui)
-set(IMNODES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs/imnodes)
+set(IMGUI_DIR   ${CMAKE_CURRENT_SOURCE_DIR}/third_party/imgui)
+set(IMNODES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/imnodes)
 
 add_executable(node_editor
     src/main.cpp
